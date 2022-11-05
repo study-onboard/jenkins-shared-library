@@ -19,7 +19,7 @@ class ReportManager {
         }
         builder.append("</body></html>")
 
-        def file = new File("./addReportItem.html")
+        def file = new File("./report.html")
         file.write(builder.toString())
     }
 }
