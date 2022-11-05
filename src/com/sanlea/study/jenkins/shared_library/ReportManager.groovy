@@ -8,7 +8,7 @@ class ReportManager {
         println("Current events: " + events.toString())
     }
 
-    static void save() {
+    static void save(env) {
         println("Current events: " + events.toString())
 
         StringBuilder builder = new StringBuilder("<html><body>")
