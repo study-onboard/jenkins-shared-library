@@ -19,7 +19,9 @@ class ReportManager {
         }
         builder.append("</body></html>")
 
-        def file = new File("./report.html")
+        def dir = new File('./report')
+        dir.mkdir()
+        def file = new File("./report/report.html")
         file.write(builder.toString())
     }
 }
