@@ -5,10 +5,13 @@ class ReportManager {
 
     static void report(String event) {
         events.add(event)
+        println("Current events: " + events.toString())
     }
 
     static void save() {
-        StringBuilder builder = new StringBuilder("<html><body>");
+        println("Current events: " + events.toString())
+
+        StringBuilder builder = new StringBuilder("<html><body>")
         builder.append("<h1>Event Report</h1>")
         builder.append("<hr />")
         events.each {
