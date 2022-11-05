@@ -20,7 +20,6 @@ class ReportManager {
         builder.append("</body></html>")
 
         def dir = env.WORKSPACE + '/report'
-        script.sh "mkdir ${dir}"
         script.dir('report') {
             def file = new File(dir,"report.html")
             file.createNewFile()
