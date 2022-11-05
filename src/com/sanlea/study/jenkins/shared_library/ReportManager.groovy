@@ -21,7 +21,7 @@ class ReportManager {
 
         def dir = env.WORKSPACE + '/report'
         script.dir('report') {
-            def file = new File(dir,"report.html")
+            def file = new File("${dir}/report.html")
             file.createNewFile()
             file.write(builder.toString())
         }
