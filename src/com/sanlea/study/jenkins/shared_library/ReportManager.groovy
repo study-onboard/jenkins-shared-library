@@ -19,9 +19,9 @@ class ReportManager {
         }
         builder.append("</body></html>")
 
-        fileOperations {
-            folderCreateOperation 'report'
-            fileCreateOperation 'report/report.html', builder.toString()
+        script.fileOperations {
+            script.folderCreateOperation 'report'
+            script.fileCreateOperation 'report/report.html', builder.toString()
         }
     }
 }
