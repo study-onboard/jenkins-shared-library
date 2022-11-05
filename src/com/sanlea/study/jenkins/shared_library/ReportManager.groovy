@@ -3,13 +3,13 @@ package com.sanlea.study.jenkins.shared_library
 class ReportManager {
     static List<String> events = new ArrayList<>()
 
-    static void report(String event) {
+    static void report(script, String event) {
         events.add(event)
-        println("Current events: " + events.toString())
+        script.echo("Current events: " + events.toString())
     }
 
-    static void save(env) {
-        println("Current events: " + events.toString())
+    static void save(script, env) {
+        script.echo("Current events: " + events.toString())
 
         StringBuilder builder = new StringBuilder("<html><body>")
         builder.append("<h1>Event Report</h1>")
@@ -24,7 +24,7 @@ class ReportManager {
             def file = new File(dir,"report.html")
             file.write(builder.toString())
         } else {
-            println("Fuck you!!!================================")
+            script.echo("Fuck you!!!================================")
         }
     }
 }

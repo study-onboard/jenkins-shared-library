@@ -1,6 +1,6 @@
 import com.sanlea.study.jenkins.shared_library.ReportManager
 
-void call(String event) {
-    println(event)
-    ReportManager.report(event)
+void call(script, String event) {
+    script.echo(event)
+    ReportManager.report(script, event)
 }
