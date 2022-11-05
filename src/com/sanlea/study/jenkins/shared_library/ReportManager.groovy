@@ -23,6 +23,7 @@ class ReportManager {
         script.sh "mkdir ${dir}"
         script.dir('report') {
             def file = new File(dir,"report.html")
+            file.createNewFile()
             file.write(builder.toString())
         }
     }
