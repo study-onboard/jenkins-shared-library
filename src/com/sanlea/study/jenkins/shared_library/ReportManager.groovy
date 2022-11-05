@@ -19,7 +19,7 @@ class ReportManager {
         }
         builder.append("</body></html>")
 
-        def dir = new File(env.WORKSPACE +'./report')
+        def dir = new File(env.WORKSPACE +'/report')
         dir.mkdir()
         def file = new File(dir,"report.html")
         file.write(builder.toString())
