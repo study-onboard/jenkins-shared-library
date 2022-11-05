@@ -19,11 +19,9 @@ class ReportManager {
         }
         builder.append("</body></html>")
 
-        def dir = env.WORKSPACE + '/report'
-        script.dir('report') {
-            def file = new File("${dir}/report.html")
-            file.createNewFile()
-            file.write(builder.toString())
+        fileOperations {
+            folderCreateOperation 'report'
+            fileCreateOperation 'report/report.html', builder.toString()
         }
     }
 }
