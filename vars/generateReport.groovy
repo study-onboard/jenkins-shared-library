@@ -1,5 +1,5 @@
 import com.sanlea.study.jenkins.shared_library.ReportManager
 
-void call() {
-    ReportManager.save()
+void call(env) {
+    ReportManager.save(env)
 }
