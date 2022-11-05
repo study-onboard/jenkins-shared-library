@@ -19,12 +19,11 @@ class ReportManager {
         }
         builder.append("</body></html>")
 
-        def dir = new File(env.WORKSPACE +'/report')
-        if (dir.mkdir()) {
+        def dir = env.WORKSPACE + '/report'
+        script.sh "mkdir ${dir}"
+        script.dir('report') {
             def file = new File(dir,"report.html")
             file.write(builder.toString())
-        } else {
-            script.echo("Fuck you!!!================================")
         }
     }
 }
