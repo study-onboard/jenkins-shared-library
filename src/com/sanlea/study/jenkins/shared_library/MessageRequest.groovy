@@ -8,16 +8,16 @@ package com.sanlea.study.jenkins.shared_library
 class MessageRequest {
 
     // receiver
-    String receiver
+    String receiver = "<Not set>"
 
     // title
-    String title
+    String title = "<Not set>"
 
     // content
-    String content
+    String content = "<Not set>"
 
     // sender
-    String sender
+    String sender = "<Not set>"
 
     void receiver(String receiver) {
         this.receiver = receiver
