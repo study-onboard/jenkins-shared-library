@@ -3,12 +3,11 @@ package com.sanlea.study.jenkins.shared_library
 class ReportManager {
     static List<String> events = new ArrayList<>()
 
-    static void report(script, String event) {
+    static void report(String event) {
         events.add(event)
-        script.echo("Current events: " + events.toString())
     }
 
-    static void save(script, env) {
+    static void save(script) {
         script.echo("Current events: " + events.toString())
 
         StringBuilder builder = new StringBuilder("<html><body>")
